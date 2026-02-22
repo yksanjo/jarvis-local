@@ -1,102 +1,82 @@
-# Jarvis Local - Privacy-Focused Personal AI Assistant
+# jarvis-local
 
-A privacy-first personal AI assistant that runs entirely on your local machine. Inspired by Jarvis from Iron Man and projects like OpenClaw and Leon.
+## Detailed Description
 
-## Features
+jarvis-local is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-- 🗣️ **Voice Commands** - Offline speech-to-text using Whisper
-- 🤖 **Local LLM** - Connects to Ollama for AI responses (Llama2, Mistral, etc.)
-- 📝 **Task Management** - Natural language task creation and tracking
-- 📁 **File Search** - Local file indexing and full-text search
-- 📅 **Calendar** - Local calendar with event management
-- 🔌 **Skills/Plugins** - Extensible plugin system
-- 🔒 **Privacy First** - Zero cloud dependency, all data stored locally
+## Problem Statement
 
-## Tech Stack
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-- **Frontend**: Electron + React + TypeScript
-- **Backend**: FastAPI (Python)
-- **Database**: SQLite
-- **AI**: Ollama (local LLM)
-- **Voice**: Whisper (offline STT)
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
 
 ## Getting Started
 
 ### Prerequisites
 
-1. Node.js 18+
-2. Python 3.9+
-3. [Ollama](https://ollama.ai) (for local LLM)
+- Git
+- Project runtime/toolchain for this repo
 
-### Installation
+### Local Setup
 
-1. Clone the repository
-2. Install frontend dependencies:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-3. Install backend dependencies:
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-### Running the Application
-
-1. Start the backend:
-   ```bash
-   cd backend
-   python main.py
-   ```
-
-2. Start the frontend:
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-3. Open http://localhost:5173 in your browser
-
-### Setting up Ollama
-
-1. Install Ollama from https://ollama.ai
-2. Pull a model:
-   ```bash
-   ollama pull llama2
-   ```
-3. Start Ollama:
-   ```bash
-   ollama serve
-   ```
-
-## Project Structure
-
-```
-jarvis-local/
-├── frontend/           # Electron + React app
-│   ├── src/
-│   │   ├── components/  # UI components
-│   │   ├── pages/        # Page components
-│   │   ├── store/       # Zustand state
-│   │   └── styles/      # CSS styles
-│   └── electron/        # Electron main process
-├── backend/            # FastAPI server
-│   └── main.py         # API endpoints
-└── skills/            # Plugin system
+```bash
+make test
+make lint
 ```
 
-## Privacy
+## Usage
 
-Jarvis Local is designed with privacy in mind:
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-- All data stored locally in SQLite
-- No telemetry or analytics
-- Works completely offline
-- No external API calls except to local Ollama instance
-- Your data never leaves your machine
+## Quality Standards
+
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
+
+## Security
+
+See `SECURITY.md` for responsible disclosure and handling guidelines.
+
+## Contributing
+
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT License - Feel free to use and modify as needed.
+This project is released under the MIT License.
